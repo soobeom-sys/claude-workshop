@@ -1,0 +1,15 @@
+[project]
+name = "claude-workshop"
+version = "0.1.0"
+description = "키움증권 REST API를 활용한 AI 주식 자동매매 시스템"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27.0",
+    "websockets>=12.0",
+    "python-dotenv>=1.0.0",
+    "psycopg2-binary>=2.9.9",
+    "slack-sdk>=3.27.0",
+]
+
+[tool.uv]
+package = false

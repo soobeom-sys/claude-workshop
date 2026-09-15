@@ -1,0 +1,139 @@
+- generic [ref=f11e2]:
+  - generic [ref=f11e3]:
+    - link "Skip to content" [ref=f11e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner "Global navigation menu" [ref=f11e8]:
+      - generic [ref=f11e9]:
+        - generic [ref=f11e10]:
+          - button "Open menu" [ref=f11e12] [cursor=pointer]
+          - link "Homepage (g then d)" [ref=f11e15] [cursor=pointer]:
+            - /url: /
+        - generic [ref=f11e18]:
+          - navigation "Breadcrumbs" [ref=f11e19]:
+            - list [ref=f11e20]:
+              - listitem [ref=f11e21]:
+                - link "soobeom-sys" [ref=f11e22] [cursor=pointer]:
+                  - /url: /soobeom-sys
+          - button "Open quick search dialog, type / to search" [ref=f11e26] [cursor=pointer]:
+            - generic [ref=f11e28]:
+              - generic:
+                - text: Type
+                - generic: /
+                - text: to search
+        - generic [ref=f11e29]:
+          - generic [ref=f11e30]:
+            - generic [ref=f11e33]:
+              - link "Chat with Copilot" [ref=f11e35] [cursor=pointer]:
+                - /url: /copilot
+              - button "Open Copilot…" [ref=f11e40] [cursor=pointer]
+            - button "Create new..." [ref=f11e42] [cursor=pointer]
+            - generic [ref=f11e44]:
+              - link "All issues (g then i)" [ref=f11e45] [cursor=pointer]:
+                - /url: /issues
+              - link "All pull requests (g then p)" [ref=f11e49] [cursor=pointer]:
+                - /url: /pulls
+              - link "All repositories" [ref=f11e52] [cursor=pointer]:
+                - /url: /repos
+          - link "You have no unread notifications (g then n)" [ref=f11e55] [cursor=pointer]:
+            - /url: /notifications
+          - button "Open user navigation menu" [ref=f11e59] [cursor=pointer]:
+            - img "User avatar" [ref=f11e60]
+      - heading "User navigation" [level=2] [ref=f11e61]
+      - navigation "User" [ref=f11e62]:
+        - list [ref=f11e63]:
+          - listitem [ref=f11e64]:
+            - link "Overview" [ref=f11e65] [cursor=pointer]:
+              - /url: /soobeom-sys
+          - listitem [ref=f11e70]:
+            - link "Repositories" [ref=f11e71] [cursor=pointer]:
+              - /url: /soobeom-sys?tab=repositories
+          - listitem [ref=f11e76]:
+            - link "Projects" [ref=f11e77] [cursor=pointer]:
+              - /url: /soobeom-sys?tab=projects
+          - listitem [ref=f11e82]:
+            - link "Packages" [ref=f11e83] [cursor=pointer]:
+              - /url: /soobeom-sys?tab=packages
+          - listitem [ref=f11e88]:
+            - link "Stars" [ref=f11e89] [cursor=pointer]:
+              - /url: /soobeom-sys?tab=stars
+  - main [ref=f11e96]:
+    - generic [ref=f11e98]:
+      - generic [ref=f11e101]:
+        - generic [ref=f11e102]:
+          - generic [ref=f11e103]:
+            - link "Change your avatar" [ref=f11e105] [cursor=pointer]:
+              - /url: https://github.com/account
+            - button "Set status" [ref=f11e110] [cursor=pointer]
+          - heading "soobeom-sys" [level=1] [ref=f11e119]
+        - generic [ref=f11e122]:
+          - button "Edit profile" [ref=f11e124] [cursor=pointer]
+          - list [ref=f11e125]:
+            - listitem "Member since" [ref=f11e126]:
+              - generic [ref=f11e129]: Joined Sep 1, 2026last week
+      - generic [ref=f11e132]:
+        - generic [ref=f11e133]:
+          - heading "Lists (0)" [level=2] [ref=f11e134]
+          - generic [ref=f11e135]:
+            - group [ref=f11e137]:
+              - button "Sort" [ref=f11e138] [cursor=pointer]
+            - button "Create list" [ref=f11e140] [cursor=pointer]
+        - generic [ref=f11e143]:
+          - heading "Create your first list" [level=3] [ref=f11e146]
+          - generic [ref=f11e147]:
+            - text: Lists make it easier to organize and curate repositories that you have starred.
+            - button "Create your first list." [ref=f11e148] [cursor=pointer]
+        - generic [ref=f11e153]:
+          - generic [ref=f11e154]:
+            - heading "Stars" [level=2] [ref=f11e155]
+            - generic [ref=f11e156]:
+              - generic [ref=f11e159]:
+                - generic [ref=f11e160]:
+                  - generic [ref=f11e161]: Search
+                  - searchbox "Search stars" [ref=f11e163]
+                - button "Search" [ref=f11e164] [cursor=pointer]
+              - generic [ref=f11e167]:
+                - 'button "Type: All" [ref=f11e170] [cursor=pointer]'
+                - 'button "Sort by: Recently starred" [ref=f11e175] [cursor=pointer]'
+          - generic [ref=f11e178]: Showing results
+          - generic [ref=f11e179]:
+            - heading "You don’t have any starred repositories yet." [level=3] [ref=f11e182]
+            - paragraph [ref=f11e183]:
+              - text: As you
+              - link "explore GitHub" [ref=f11e184] [cursor=pointer]:
+                - /url: /explore
+              - text: ", star repositories to save them for later and they’ll show up here."
+  - contentinfo [ref=f11e185]:
+    - heading "Footer" [level=2] [ref=f11e186]
+    - generic [ref=f11e187]:
+      - generic [ref=f11e188]:
+        - link "GitHub Homepage" [ref=f11e189] [cursor=pointer]:
+          - /url: https://github.com
+        - generic [ref=f11e192]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=f11e193]:
+        - heading "Footer navigation" [level=3] [ref=f11e194]
+        - list "Footer navigation" [ref=f11e195]:
+          - listitem [ref=f11e196]:
+            - link "Terms" [ref=f11e197] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=f11e198]:
+            - link "Privacy" [ref=f11e199] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=f11e200]:
+            - link "Security" [ref=f11e201] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=f11e202]:
+            - link "Status" [ref=f11e203] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=f11e204]:
+            - link "Community" [ref=f11e205] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=f11e206]:
+            - link "Docs" [ref=f11e207] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=f11e208]:
+            - link "Contact" [ref=f11e209] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=f11e210]:
+            - button "Manage cookies" [ref=f11e212] [cursor=pointer]
+          - listitem [ref=f11e213]:
+            - button "Do not share my personal information" [ref=f11e215] [cursor=pointer]
