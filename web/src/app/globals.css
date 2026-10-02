@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* 다크모드 전용: html에 class="dark"를 고정하고 dark: 변형을 클래스 기반으로 동작시킨다. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --profit: #22c55e;
+  --loss: #ef4444;
+  --neutral: #94a3b8;
+  --bg-primary: #0f172a;
+  --bg-card: #1e293b;
+  --bg-hover: #334155;
+  --border: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+
+  color-scheme: dark;
+}
+
+/* CSS 변수를 Tailwind 유틸리티로도 노출한다 (예: text-profit, bg-card). */
+@theme inline {
+  --color-profit: var(--profit);
+  --color-loss: var(--loss);
+  --color-neutral: var(--neutral);
+  --color-primary: var(--bg-primary);
+  --color-card: var(--bg-card);
+  --color-hover: var(--bg-hover);
+  --color-border: var(--border);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}

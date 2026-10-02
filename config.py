@@ -41,7 +41,7 @@ BASE_URL = "https://mockapi.kiwoom.com" if USE_MOCK else "https://api.kiwoom.com
 # Claude Code CLI / AI 모델 (진입 판단)
 # ---------------------------------------------------------------------------
 CLAUDE_BIN = os.getenv("CLAUDE_BIN", "claude")
-ENTRY_MODEL = os.getenv("ENTRY_MODEL", "claude-sonnet-4-6")
+ENTRY_MODEL = os.getenv("ENTRY_MODEL", "claude-opus-5-5")
 ENTRY_AGENT_TIMEOUT_SEC = _get_float("ENTRY_AGENT_TIMEOUT_SEC", "180.0")
 
 # ---------------------------------------------------------------------------
@@ -96,6 +96,14 @@ TRAILING_DROP_PCT = _get_float("TRAILING_DROP_PCT", "0.7")
 # ---------------------------------------------------------------------------
 CONDITION_IDS = [c.strip() for c in os.getenv("CONDITION_IDS", "").split(",") if c.strip()]
 
+# ---------------------------------------------------------------------------
+# Database (Supabase)
+# ---------------------------------------------------------------------------
+DB_ENABLED = _get_bool("DB_ENABLED", "false")
+SUPABASE_URL = os.getenv("SUPABASE_URL", "")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY", "")
+DATABASE_URL = os.getenv("DATABASE_URL", "")  # Python에서는 미사용, Next.js 대시보드(Part 10)가 참조
+
 
 @dataclass(frozen=True)
 class StrategyParams:
@@ -104,8 +112,9 @@ class StrategyParams:
     max_hold_min: int
     skip_after_hour: int
     style: str
-    trailing_activate_pct: float | None = None
-    trailing_drop_pct: float | None = None
+    # 트레일링 스탑을 끄려면 두 값 중 하나를 None으로 지정한다.
+    trailing_activate_pct: float | None = TRAILING_ACTIVATE_PCT
+    trailing_drop_pct: float | None = TRAILING_DROP_PCT
 
 
 _DEFAULT_STRATEGY = StrategyParams(
@@ -118,14 +127,12 @@ _DEFAULT_STRATEGY = StrategyParams(
 
 # 조건식 이름 -> 전략 파라미터. Part 05에서 조건식을 만들 때마다 항목을 추가한다.
 STRATEGY_MAP: dict[str, StrategyParams] = {
-    "급등초입포착": StrategyParams(
-        target_pct=3.0,
-        stop_pct=-1.2,
-        max_hold_min=10,
+    "장중외국인기관동반매수스윙": StrategyParams(
+        target_pct=2.5,
+        stop_pct=-1.5,
+        max_hold_min=320,
         skip_after_hour=14,
-        style="momentum",
-        trailing_activate_pct=1.2,
-        trailing_drop_pct=0.6,
+        style="default",
     ),
 }
 

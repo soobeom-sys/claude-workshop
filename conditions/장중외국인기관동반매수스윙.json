@@ -1,0 +1,54 @@
+{
+  "condition_name": "장중외국인기관동반매수스윙",
+  "market": "KRX",
+  "search_time": "09:00~10:00",
+  "conditions": [
+    {
+      "id": "A",
+      "category": "범위지정",
+      "indicator": "검색시간",
+      "params": { "start": "09:00", "end": "10:00" }
+    },
+    {
+      "id": "B",
+      "category": "시세분석>외국인",
+      "indicator": "외국인/기관순매수(당일잠정치)",
+      "params": { "target": "외국인+기관" },
+      "operator": "초과",
+      "value": 0,
+      "unit": "주",
+      "note": "KRX 기준으로만 제공"
+    },
+    {
+      "id": "C",
+      "category": "시세분석>가격조건",
+      "indicator": "주가등락률",
+      "period_type": "일",
+      "candle_ref": { "base": 0, "target": "시가", "compare_ref": 0, "compare_target": "종가" },
+      "operator": "이상",
+      "value": 0,
+      "unit": "%"
+    },
+    {
+      "id": "D",
+      "category": "시세분석>거래량/거래대금",
+      "indicator": "거래량비율",
+      "period_type": "일",
+      "candle_ref": { "base": 1, "target": "거래량", "compare_ref": 0, "compare_target": "거래량" },
+      "operator": "이상",
+      "value": 150,
+      "unit": "%"
+    },
+    {
+      "id": "E",
+      "category": "범위지정",
+      "indicator": "시가총액",
+      "operator": "이상",
+      "value": 100000000000,
+      "unit": "원"
+    }
+  ],
+  "logic": "A and B and C and D and E",
+  "strategy_map_key": "장중외국인기관동반매수스윙",
+  "notes": "외국인/기관순매수(당일잠정치)는 KRX 기준으로만 제공되므로 market은 반드시 KRX로 고정. 잠정치 데이터의 장중 갱신 주기는 문서에 명시되어 있지 않아 실전 투입 전 HTS에서 09:00~10:00 구간 실시간 갱신 여부를 반드시 육안 확인할 것. C·D·E는 동반매수만 있고 실제 주가·거래량 반응이 없는 종목을 걸러내기 위한 선택 필터이며, 조건 B만 원하면 제거 가능."
+}

@@ -23,3 +23,11 @@ logs/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Runtime state
+.positions.json
+.positions.json.tmp
+
+# Local secrets / test artifacts
+.mcp.json
+.playwright-mcp/
